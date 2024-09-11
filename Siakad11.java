@@ -28,8 +28,8 @@ public class Siakad11 {
         //menghitung nilai akhir
         nilaiAkhir = (nilaiKuis + nilaiTugas + nilaiUjian) / 3;
         //menuliskan hasil akhir
-        System.out.println("Nama : " + nama + " NIM : " + nim);
-        System.out.println("Kelas : " + kelas + " Absen : " + absen);
+        System.out.println("Mahasiswa dengan nama " + nama + "(NIM " + nim + ")");
+        System.out.print(" Kelas " + kelas + " No absen  " + absen);
         System.out.println("Nilai akhir: " + nilaiAkhir);
     }
 }
