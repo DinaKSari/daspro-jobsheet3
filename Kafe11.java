@@ -19,11 +19,13 @@ public class Kafe11 {
         jmlRoti = input.nextInt();
         //menghitung total harga
         double totalHarga = (jmlKopi * hargaKopi) + (jmlTeh * hargaTeh) + (jmlRoti * hargaRoti);
+        byte totalByte = (byte)totalHarga;
         //menghitung nominal pembayaran
-        double nominalBayar = totalHarga - (diskon * totalHarga);
+        double nominalBayar = totalByte - (diskon * totalHarga);
+        int nominalInt = (int)nominalBayar;
         //menuliskan hasil akhir
-        System.out.println("Keanggotaan pelanggan ");
+        System.out.println("Keanggotaan pelanggan " + keanggotaan);
         System.out.println("Item pembelian " + jmlKopi + " kopi " + jmlTeh + " teh " + jmlRoti + " roti ");
-        System.out.println("Nominal bayar Rp.- " + nominalBayar);
+        System.out.println("Nominal bayar Rp." + nominalInt);
     }
 }

@@ -6,16 +6,16 @@ public class Siakad11 {
         Scanner sc = new Scanner (System.in);
         //mendeklarasikan semua variable dengan tipe data
         String nama,nim;
-        char kelas;
+        String kelas;
         byte absen;
-        double nilaiKuis, nilaiTugas, nilaiUjian, nilaiAkhir;
+        double nilaiKuis, nilaiTugas, nilaiUts, nilaiUas, nilaiAkhir;
         //menuliskan perintah untuk memasukan data dengan memanfaatkan scanner
         System.out.print("Masukan nama : ");
         nama = sc.nextLine();
         System.out.print("Masukan NIM : ");
         nim = sc.nextLine();
         System.out.print("Masukan kelas : ");
-        kelas = sc.nextLine().charAt(0);
+        kelas = sc.nextLine();
         System.out.print("Masukan nomor absen : ");
         absen = sc.nextByte();
         //menuliskan perintah untuk memasukan data nilai
@@ -24,12 +24,15 @@ public class Siakad11 {
         System.out.print("Masukan nilai tugas : ");
         nilaiTugas = sc.nextDouble();
         System.out.print("Masukan nilai ujian : ");
-        nilaiUjian = sc.nextDouble();
+        nilaiUts = sc.nextDouble();
+        System.out.print("Masukan nilai UAS : ");
+        nilaiUas = sc.nextDouble();
         //menghitung nilai akhir
-        nilaiAkhir = (nilaiKuis + nilaiTugas + nilaiUjian) / 3;
+        nilaiAkhir = (nilaiKuis * 0.20) + (nilaiTugas * 0.15) + (nilaiUts * 0.30) + (nilaiUas * 0.35);
         //menuliskan hasil akhir
         System.out.println("Mahasiswa dengan nama " + nama + "(NIM " + nim + ")");
         System.out.print(" Kelas " + kelas + " No absen  " + absen);
-        System.out.println("Nilai akhir: " + nilaiAkhir);
+        System.out.println(" Nilai akhir: " + nilaiAkhir);
+        
     }
 }
